@@ -1,0 +1,133 @@
+html {
+  /* background-color: rgb(99, 195, 233); */
+  /* background-color: rgb(172, 197, 144); */
+  background-color: rgb(81, 216, 216);
+
+}
+
+body {
+  font-family: Tahomaa, sans-serif;
+  font-size: 87%;
+}
+
+header {
+  color: rgb(19, 55, 214);
+  padding-top: 20px;
+  /* padding-bottom: 20px; */
+  font-size: 100%;
+}
+
+header h1 {
+  margin: 0;
+}
+
+header p {
+  margin: 0;
+}
+
+.site-nav {
+  margin-top: 20px;
+}
+
+.site-nav ul {
+  margin: 0;
+  padding: 0;
+}
+
+.site-nav li {
+  list-style: none;
+  float: left;
+  margin-right: 20px;
+}
+
+.site-nav a {
+  display: block;
+  color: black;
+  text-decoration: none;
+  padding: 10px 10px 10px 10px;
+  border: 3px solid rgb(42, 42, 173);
+  border-bottom: none;
+}
+
+.site-nav a:hover {
+  background-color: rgb(90, 172, 219);
+  
+}
+
+.container {
+  /* width: 940px; */
+  background-color: white;
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 40px;
+  padding-right: 40px;
+  box-sizing: border-box;
+}
+
+.content-area {
+  border-top: 3px solid rgb(42, 42, 173);
+  border-bottom: 3px solid rgb(42, 42, 173);
+}
+
+.main-area {
+  width: 66%;
+  float: left;
+  padding-right: 20px;
+  box-sizing: border-box;
+}
+
+.sidebar {
+  margin-top: 10px;
+  width: 34%;
+  float: right;
+  background-color: rgb(178, 228, 178);
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding: 15px 40px 5px 20px;
+  position: relative;
+  box-sizing: border-box;
+}
+
+
+.info {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding-left: 10px;
+  padding-bottom: 10px;
+  border: 2px solid rgb(99, 99, 99);
+  font-weight: 700;
+}
+
+.info h2 {
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+}
+
+.fixed {
+  clear: both;
+}
+
+footer {
+  color: grey;
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+
+/* ====== ClearFixed Method ====== */
+.group::before,
+.group::after {
+  content: "";
+  display: table;
+}
+
+.group::after {
+  clear: both;
+}
+
+.group {
+  zoom: 1;
+}
+/* ================================ */

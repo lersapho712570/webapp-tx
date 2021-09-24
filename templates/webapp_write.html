@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" style="background-color: {{ bgcolor }};">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HOME</title>
+    <link rel="stylesheet" href="../static/webapp.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Webapp TX Version : 1</h1>
+        <p>Webapp with Python Flask</p>
+        <nav class="site-nav">
+          <ul class="group">
+            <li><a href=".">Home</a></li>
+          </ul>
+        </nav>
+      </header>
+      <div class="content-area group">
+        <div class="main-area">
+          <div class="info">
+            <h2>Container Information</h2>
+            <p>Hostname : {{ var['name'] }}</p>
+            <p>IP Addres : {{ var['ip'] }}</p>
+            <p>Netmask : {{ var['netmask'] }}</p>
+            <p>Gateway : {{ var['gateway'] }}</p>
+            <p>OS-Distro : {{ var['os-base'] }}</p>
+            <p>OS-Version : {{var['os-version']}}</p>
+            <p>Mount [/tmp/data] : {{var['mount']}}</p>
+            <p>
+              env var : <span style="color: {{ color }}"> {{ color }} </span>
+            </p>
+          </div>
+        </div>
+
+        <div class="sidebar">
+          <div style="padding-top: 20px">
+            <!-- Form -->
+            <form action="" method="POST">
+              <label for="yourMessage">Your Message:</label>
+              <textarea name="MessageBox" id="" cols="30" rows="10"></textarea>
+              <input
+                type="submit"
+                class="page1"
+                name="sendText"
+                value="submit"
+                {{
+                allow
+                }}
+              />
+            </form>
+          </div>
+        </div>
+
+        <!-- <div class="fixed"></div> -->
+      </div>
+
+      <footer>
+        <p>&copy; 2021</p>
+      </footer>
+    </div>
+  </body>
+</html>
