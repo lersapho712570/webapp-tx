@@ -9,7 +9,7 @@
   <body>
     <div class="container">
       <header>
-        <h1>Webapp TX Version : 1</h1>
+        <h1>Webapp TX Version : 2.0</h1>
         <p>Webapp with Python Flask</p>
         <nav class="site-nav">
           <ul class="group">
@@ -28,6 +28,7 @@
             <p>OS-Distro : {{ var['os-base'] }}</p>
             <p>OS-Version : {{var['os-version']}}</p>
             <p>Mount [/tmp/data] : {{var['mount']}}</p>
+            <p>docker img : 712570/webapp-tx:2.0</p>
             <p>
               env var : <span style="color: {{ color }}"> {{ color }} </span>
             </p>
@@ -57,7 +58,7 @@
       </div>
 
       <footer>
-        <p>&copy; 2021</p>
+        <p>&copy; 2021 - eiei</p>
       </footer>
     </div>
   </body>
