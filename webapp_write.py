@@ -17,20 +17,16 @@ bgcolor=random.choice(bgcolors)
 @app.route('/',methods=['GET','POST'])
 def index():
 
-    ints = netifaces.interfaces()
-    # ['lo', 'ens33', 'virbr0', 'virbr0-nic', 'docker0', 'veth07996f3']
-    ip = netifaces.ifaddresses(ints[1])[2][0]['addr']
-    netmask = netifaces.ifaddresses(ints[1])[2][0]['netmask']
-
     gateways = netifaces.gateways()
-    gateway = gateways[2][0][0]
+    gateway = gateways['default'][2][0]
+    intName = gateways['default'][2][1]
 
-    # print("Gateway: " + gateways[2][0][0])
-    # [('172.31.1.1', 'ens33', True)]
+    ip = netifaces.ifaddresses(intName)[2][0]['addr']
+    netmask = netifaces.ifaddresses(intName)[2][0]['netmask']
 
     hostname = subprocess.getstatusoutput("hostname")[1]
     # os.path.exists('/tmp/data'),
-
+ 
     if os.system('df -h | grep /data') == 0 :
 
         mount = True
